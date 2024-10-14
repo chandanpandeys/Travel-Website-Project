@@ -1,1 +1,262 @@
+Enhanced Media Queries for Improved Responsiveness
+
+/* General Style for screens up to 1380px */
+@media screen and (max-width: 1380px) {
+    header .content .cont-bx {
+        width: 70%;
+        padding: 30px 50px;
+    }
+    header .trip_bx {
+        width: 95%;
+    }
+    header .trip_bx .travel_bx .cards .card {
+        width: 240px;
+        /* margin-bottom: 15px; */
+    }
+    .offers .cards .card {
+        width: 200px;
+    }
+}
+
+/* Adjustments for screens up to 1250px */
+@media screen and (max-width: 1250px) {
+    header nav ul li{
+        padding: 3px 15px;
+    }
+    header .trip_bx {
+        width: 90%;
+    }
+    header .content .cont-bx {
+        width: 70%;
+        padding: 30px 50px;
+    }
+    header .trip_bx .search_bx {
+        width: auto;
+    }
+    header .trip_bx .travel_bx .cards .card {
+        width: 220px;
+    }
+    .offers .cards {
+        gap: 15px;
+    }
+    .offers .cards .card {
+        width: 180px;
+    }
+}
+
+/* Adjustments for screens up to 1024px */
+@media screen and (max-width: 1024px) {
+    header {
+        height: auto;
+    }
+    header .line nav {
+        height: 50px;
+    }
+    header nav ul{
+        font-size: 13px;
+        /* padding: 0px 15px; */
+    }
+    header nav ul li{
+        padding: 0px 15px;
+    }
+    header .content .cont-bx {
+        width: auto;
+        padding: 30px 40px;
+    }
+    header .trip_bx .search_bx {
+        width: auto;
+    }
+    header .trip_bx .travel_bx .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    header .trip_bx .travel_bx .cards .card {
+        width: 48%;
+    }
+    .offers .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .offers .cards .card {
+        width: 45%;
+        margin-bottom: 20px;
+    }
+    .destination {
+        width: 90%;
+    }
+}
+
+/* Adjustments for screens up to 768px (Tablets) */
+@media screen and (max-width: 890px) {
+    header nav ul {
+        display: none;
+    }
+    header nav .bi-three-dots {
+        display: block;
+        font-size: 24px;
+    }
+    header .trip_bx .search_bx {
+        width: auto;
+        position: static;
+        margin-bottom: 15px;
+    }
+    header .trip_bx .travel_bx .cards {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+    .offers h1, .offers p {
+        font-size: 18px;
+    }
+    .offers .cards .card {
+        width: 90%;
+    }
+    .destination {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .destination .des_bx, .destination .img_bx {
+        width: 100%;
+    }
+    .form {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .gallery-item {
+        flex-direction: column;
+    }
+    .gallery-item.reverse {
+        flex-direction: column;
+    }
+    .gallery-item img {
+        width: 100%;
+        margin: 0 0 10px 0;
+    }
+    .gallery-details {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* Adjustments for screens up to 576px (Large Mobile Devices) */
+@media screen and (max-width: 576px) {
+    header .content .cont-bx {
+        width: 100%;
+        padding: 10px 20px;
+    }
+    header .trip_bx .travel_bx .cards .card {
+        width: 90%;
+        margin-bottom: 0px;
+    }
+    /* header .trip_bx .travel_bx .cards .card img {
+        height: auto;
+    } */
+    header .content h1 {
+        font-size: 24px;
+    }
+    header .content p {
+        font-size: 14px;
+    }
+    .cards .card h4 {
+        font-size: 14px;
+    }
+    .offers .cards .card {
+        width: 100%;
+    }
+    .destination h4, .destination p {
+        text-align: center;
+        font-size: 16px;
+    }
+    .form h2, .form p {
+        font-size: 14px;
+    }
+    .form .input {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+/* Adjustments for screens up to 425px (Small Mobile Devices) */
+@media screen and (max-width: 425px) {
+    header nav .bi-three-dots {
+        margin-right: 5px;
+    }
+    body {
+        font-size: 14px;
+    }
+    header nav .bi-three-dots {
+        font-size: 22px;
+    }
+
+    header .content h1 {
+        font-size: 20px;
+    }
+    header .content p {
+        font-size: 12px;
+    }
+    header .content .cont-bx a {
+        font-size: 10px;
+    }
+    .offers h1, .offers p {
+        font-size: 16px;
+    }
+    .destination .img_bx img {
+        height: 180px;
+    }
+    .form .input input, .form .input button {
+        width: 100%;
+    }
+    .gallery-item {
+        width: calc(100% - 20px);
+    }
+}
+
+/* Adjustments for screens up to 320px (Very Small Mobile Devices) */
+@media screen and (max-width: 320px) {
+    header nav .bi-three-dots {
+        margin-left: 5px;
+    }
+    header .content h1 {
+        font-size: 18px;
+    }
+    header .content .cont-bx {
+        padding: 5px 10px;
+    }
+    header .trip_bx .search_bx .card h4 {
+        font-size: 12px;
+    }
+    .cards .card h4 {
+        font-size: 12px;
+    }
+    .offers h1, .offers p {
+        font-size: 14px;
+    }
+    .offers .cards .card {
+        width: 100%;
+        height: auto;
+    }
+    .destination .des_bx h4, .destination .des_bx p {
+        font-size: 14px;
+    }
+    .form h2, .form p {
+        font-size: 12px;
+    }
+    .form .input {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .form .input input, .form .input button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+}
 
