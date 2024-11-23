@@ -1,8 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+}
 
 header {
     width: 100%;
-    height: 95vh;
+    height: 90vh;
     margin: auto;
 }
 header .line{
@@ -95,7 +99,7 @@ header .content::before{
     z-index: -1;
 }  
 header .content .cont-bx{
-    width: 600px;
+    width: 50%;
     height:auto;
     color: #fff;
     padding: 30px 80px;
@@ -131,8 +135,10 @@ header .content .cont-bx a:hover{
 header .trip_bx{
     position: relative;
     width: 90%;
-    height: auto;
+    /* height: 390px; */
     margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 header .trip_bx .search_bx {
     position: absolute;
@@ -186,82 +192,131 @@ header .trip_bx .search_bx input[type="button"]{
 header .trip_bx .search_bx input[type="button"]:hover{
     background: gray;
 }
-header .trip_bx .travel_bx{
+/* / */
+
+
+header .trip_bx .travel_bx {
     position: relative;
-    width: auto;
+    width: 100%;
     height: auto;
     margin: auto;
-    top:30px;
+    top: 20px;
     border-radius: 10px;
     padding-bottom: 20px;
     box-shadow: 0px 20px 20px -10px rgba(104, 104, 104, 0.3);
 }
-header .trip_bx .travel_bx::before{
+
+header .trip_bx .travel_bx::before {
     content: '';
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgb(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.7);
     border-radius: 10px;
     backdrop-filter: blur(5px);
     z-index: -1;
 }
-header .trip_bx .travel_bx h3{
+
+header .trip_bx .travel_bx h3 {
     margin: 0;
-    padding: 60px 0px 15px 2.5%;
+    margin-top: 10px;
+    padding: 60px 0 15px 2.5%;
 }
-header .trip_bx .travel_bx .cards{
+
+header .trip_bx .travel_bx .cards {
     width: 95%;
     height: auto;
-    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin: 0 auto;
 }
-header .trip_bx .travel_bx .cards .card{
-    width:280px;
+
+header .trip_bx .travel_bx .cards .card {
+    width: 280px;
     height: 250px;
     overflow: hidden;
     transition: transform 0.3s ease;
 }
-header .trip_bx .travel_bx .cards .card:hover{
+
+header .trip_bx .travel_bx .cards .card:hover {
     transform: translateY(-10px);
 }
-header .trip_bx .travel_bx .cards .card h4{
+
+header .trip_bx .travel_bx .cards .card h4 {
     display: flex;
     align-items: center;
     font-size: 16px;
     font-weight: 600;
     margin: 0px 0px 10px 0px;
-
 }
+
 header .trip_bx .travel_bx .cards .card h3 .bi-chevron-right{
     width: 20px;
     height: 20px;
     font-size: 15px;
 }
-header .trip_bx .travel_bx .cards .card img{
+
+header .trip_bx .travel_bx .cards .card img {
     width: 100%;
     height: 60%;
     object-fit: cover;
-    align-items: center;
     padding-bottom: 15px;
-    border-radius: 5px 5px 5px 5px;
+    border-radius: 5px;
 }
-header .trip_bx .travel_bx .cards .card .btn_city{
+
+header .trip_bx .travel_bx .cards .card .btn_city {
+    /* align-items: center; */
     display: flex;
-    align-items: center;
-    justify-content: end;
+    justify-content: space-between;
 }
-header .trip_bx .travel_bx .cards .card .btn_city a{
-    text-decoration: none;
+
+header .trip_bx .travel_bx .cards .card .btn_city a {
+    /* text-decoration: none;
     background: #b94d1b;
     color: #fff;
     padding: 6px 20px;
-    border-radius: 20px;
-    font-size: 11px;
+    border-radius: 20px; */
+    color: #b94d1b;
+    font-size: 16px;
     transition: .3s linear;
 }
+
+header .trip_bx .travel_bx .cards .card .btn_city a:hover {
+    background: gray;
+}
+.whatsapp-button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+    padding: 0px 1px;
+    border: 0px solid #25D366;
+    border-radius: 20px;
+    font-size: 15px;
+    cursor: pointer;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    transition: background-color 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: #5db47b; /* Slightly darker green on hover */
+}
+
+.whatsapp-text {
+    flex-grow: 1; /* Takes up space on the left */
+    text-align: center;
+    padding-left: 10px;
+} 
+
+.whatsapp-icon {
+    font-size: 24px;
+    color: white;
+    margin-left: 10px;
+}
+
+
 header .trip_bx .travel_bx .cards .card .btn_city a:hover{
     background: gray;
 }
@@ -270,7 +325,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
     width : 70%;
     height: auto;
     margin: auto;
-    margin-top: 200px;
+    margin-top: 100px;
     transition: .5s linear;
 }
 .offers h1{
@@ -357,6 +412,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 }
 .offers .cards .card .cont_bx .price, .days{
     margin: 0px 8px;
+    /* width: 20px; */
 }
 .offers .cards .card .cont_bx .price .heart_chat{
     display: flex;
@@ -386,7 +442,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 }
 .offers .cards .card .cont_bx .price .info_price a{
    text-decoration: none;
-   color: #000;
+   color: #b94d1b;
    font-size: 11px;
    font-weight: 700;
    margin-right: 13px;
@@ -452,9 +508,9 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
     font-size:12px;
     padding: 8px 15px;
     border-radius: 20px;
-    background: #000;
+    background: #25D366;
     color: #fff;
-    border: 2px solid #000;
+    border: 2px solid #25D366;
     cursor: pointer;
     transition: .3s linear;
 }
@@ -517,67 +573,189 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 }
 
 
-.gallery {
-    background: #ffffff;
+:root {
+  --font-family: 'Inter', sans-serif;
+  --primary-color: #ea4c89;
+  --secondary-color: #1769ff;
+  --gray: #656c7c;
+  --light-gray: #b1b8c9;
+  --white: #ffffff;
+  --shadow-color: rgba(204, 204, 204, 0.32);
 }
 
-.gallery h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    text-align: center;
+.pricing-section {
+    overflow:auto;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
 }
 
-.gallery-item {
+.header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+.plans {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.plan {
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: var(--shadow-color);
+  background-color: var(--white);
+  flex: 1;
+  max-width: 350px;
+}
+
+.plan-card .plan-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.plan-card h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.plan-description {
+  margin: 1rem 0;
+}
+
+.price-tag {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.features {
+  list-style: none;
+  text-align: left;
+  margin: 1.5rem 0;
+  height: 208px;
+}
+
+.features li {
+  margin-bottom: 0.8rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.features .bi-check2 {
+  color: #01bb45;
+}
+
+.features .bi-x {
+  color: var(--light-gray);
+}
+
+.btn {
+  padding: 0.8rem;
+  border-radius: 5px;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.btn-highlight {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: var(--secondary-color);
+  border: 1px solid var(--secondary-color);
+}
+
+
+.gallery{
+    /* background: url(https://res.cloudinary.com/ritalbradley/image/upload/v1657644013/pexels-elijah-o_donnell-3473569_o7ohfd.jpg) */
+        /* center center/cover no-repeat; */
+    min-height: 100vh;
+    display: -webkit-flex;
     display: flex;
-    position : relative;
-    align-items: center; 
-    background: #fff;
-    margin: 15px auto;
+    flex-direction: column;
+}
+.gallery h1 {
+    color: #000000;
+    /* font-family: Amita; */
+    margin: 20px auto;
+    width: 450px;
+    font-size: 3rem;
+    text-align: center;
+    border-bottom: 10px double #ff8418;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    position: relative;
+    width: 400px; /* Adjust the width as needed */
+    height: 300px; /* Adjust the height as needed */
+    margin: 10px;
+    border: 10px solid #e1e1e1;
+    transition-duration: 1s;
+    border-radius: 20px;
+    overflow: hidden; /* Ensure the overlay doesn't overflow the container */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.image-container:hover {
+    border: 5px solid #fff;
+    transform: scale(1.1);
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
+    color: white;
+    text-align: center;
     padding: 10px;
-    border-radius: 8px;
-    width: 70%; 
-    height: auto;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-.gallery .gallery-item .gallery-details{
-    /* display: flex; */
-    text-align: left;
-}
-.gallery-item.reverse {
-    flex-direction: row-reverse;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    border-radius: 0 0 20px 20px; /* Match the border radius of the image */
+    opacity: 0; /* Initially hidden */
 }
 
-.gallery-item img {
-    width: 250px;
-    height: 150px;       
-    border-radius: 5px;  
-    margin-right: 20px;
-    object-fit: cover;    
-}
-
-/* Style for reversed images */
-.gallery-item.reverse img {
-    width: 250px;
-    height: 150px;  
-    margin-left: 20px;
-    margin-right: 0;
-}
-
-.gallery-details {
-    max-width: 400px;
-}
-.gallery-details h4{
-    font-size: 25px;
-    margin: 0;
-    text-align: top;
+.image-container:hover .overlay {
+    transform: translateY(0);
+    opacity: 1; /* Show the overlay on hover */
 }
 
 
-.gallery-details p {
-    margin: 5px 0;
-    font-size: 20px;
-    color: #333;
-}
 
 .form {
     width: 100%;
@@ -589,7 +767,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-}
+} 
 
 .form h2{
     text-align: center;
@@ -652,7 +830,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 }
 
 footer {
-    background: #333;
+    background: #1a0a0b;
     color: #fff;
     padding: 20px;
   
@@ -713,7 +891,7 @@ footer {
 
 .footer-content div:first-child ul li a i {
     font-size: 24px;         /* Increase icon size */
-    color: orange;           /* Set icon color to orange */
+    /* color: orange;           Set icon color to orange */
 }
 
 /* Add hover effect */
@@ -727,9 +905,18 @@ footer {
 }
 
 .facebook-icon i {
-    color: #FF4500; /* Custom color for Facebook */
+    color: #0044ff; /* Custom color for Facebook */
 }
 
-.linkedin-icon i {
-    color: #FF7F50; /* Custom color for LinkedIn */
+.location-icon i {
+    color: #ff0000; /* Custom color for LinkedIn */
+}
+
+.footer-bottom {
+    height: 20px;
+    text-align: center;
+    border-top: 0.5px solid #fff;
+    /* margin : 0px; */
+    padding-bottom: 12px;
+    font-size: 15px;
 }
