@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
+html { scroll-behavior: smooth;
+width:100%; }
 body {
     font-family: "Poppins", sans-serif;
 }
@@ -29,6 +30,9 @@ header .line nav {
     background: #fff;
     box-shadow: 0px 10px 15px rgba(135, 135, 135, 0.341);
     
+}
+#packages {
+    overflow-y: scroll;
 }
 header .line nav img{
     width: 30px;
@@ -80,7 +84,7 @@ header nav ul li a{
     font-weight: 500;
     transition: .3s linear;
 }
-header nav .bi-three-dots {
+header nav .bi-list {
     display: none;
     margin: 5px; 
 }
@@ -572,17 +576,6 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
    font-size: 13px;
 }
 
-
-:root {
-  --font-family: 'Inter', sans-serif;
-  --primary-color: #ea4c89;
-  --secondary-color: #1769ff;
-  --gray: #656c7c;
-  --light-gray: #b1b8c9;
-  --white: #ffffff;
-  --shadow-color: rgba(204, 204, 204, 0.32);
-}
-
 .pricing-section {
     overflow:auto;
   max-width: 1200px;
@@ -611,11 +604,11 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 }
 
 .plan {
-  border: 1px solid #e6e6e6;
+  border: 1px solid #ff8418;
   border-radius: 10px;
   padding: 1.5rem;
-  box-shadow: var(--shadow-color);
-  background-color: var(--white);
+  box-shadow: rgba(204, 204, 204, 0.32);
+  background-color: #fff;
   flex: 1;
   max-width: 350px;
 }
@@ -632,7 +625,14 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 }
 
 .plan-description {
-  margin: 1rem 0;
+  margin: 0px;
+
+}
+.pricing-section .plan .badge {
+    color:#fff;
+    background-color: #01bb45;
+    padding:5px;
+    border-radius: 8px;
 }
 
 .price-tag {
@@ -645,7 +645,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
   list-style: none;
   text-align: left;
   margin: 1.5rem 0;
-/*   height: 208px; */
+  height: auto;
 }
 
 .features li {
@@ -660,7 +660,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 }
 
 .features .bi-x {
-  color: var(--light-gray);
+  color: #b1b8c9;;
 }
 
 .btn {
@@ -672,26 +672,23 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 }
 
 .btn-primary {
-  background-color: var(--primary-color);
-  color: var(--white);
+  background-color: #ea4c89;
+  color: #fff;
 }
 
 .btn-highlight {
-  background-color: var(--secondary-color);
-  color: var(--white);
+  background-color: #ff321f;
+  color: #fff;
 }
 
 .btn-secondary {
-  background-color: #fff;
-  color: var(--secondary-color);
-  border: 1px solid var(--secondary-color);
+  background-color: #7e009e;
+  color: #fff;
+  /* border: 1px solid var(--secondary-color); */
 }
 
 
 .gallery{
-    /* background: url(https://res.cloudinary.com/ritalbradley/image/upload/v1657644013/pexels-elijah-o_donnell-3473569_o7ohfd.jpg) */
-        /* center center/cover no-repeat; */
-    min-height: 100vh;
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
@@ -701,9 +698,9 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
     /* font-family: Amita; */
     margin: 20px auto;
     width: 450px;
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
-    border-bottom: 10px double #ff8418;
+    /* border-bottom: 5px double #ff8418; */
 }
 
 .container {
@@ -716,7 +713,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 .image-container {
     position: relative;
     width: 400px; /* Adjust the width as needed */
-    height: 300px; /* Adjust the height as needed */
+    height: 250px; /* Adjust the height as needed */
     margin: 10px;
     border: 10px solid #e1e1e1;
     transition-duration: 1s;
@@ -725,9 +722,10 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 }
 
 .image-container img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    height: auto;
     border-radius: 20px;
+
 }
 
 .image-container:hover {
@@ -740,8 +738,9 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(0, 0, 0, 0.7); /* Transparent black background */
-    color: white;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent black background */
+    color: rgb(0, 0, 0);
+    backdrop-filter: blur(5px);
     text-align: center;
     padding: 10px;
     transform: translateY(100%);
@@ -758,7 +757,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
 
 
 .form {
-    width: 100%;
+    /* width: 100%; */
     height: auto;
     background: rgb(249, 249, 255);
     margin-top: 20px;
