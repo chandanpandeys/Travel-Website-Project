@@ -645,7 +645,7 @@ header .trip_bx .travel_bx .cards .card .btn_city a:hover{
   list-style: none;
   text-align: left;
   margin: 1.5rem 0;
-  height: 208px;
+/*   height: 208px; */
 }
 
 .features li {
